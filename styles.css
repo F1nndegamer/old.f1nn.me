@@ -8,14 +8,14 @@
 body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #f0f8ff;
     color: #333;
 }
 
 /* Hero section */
 .hero-section {
     height: 100vh;
-    background-image: url('your-background.jpg'); /* Replace with actual image */
+    background-image: url(Assets/Background.webp); /* Replace with actual image */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -35,7 +35,7 @@ body {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Ensures the logo and links are vertically aligned */
+    align-items: center;
     padding: 20px 40px;
     position: relative;
     z-index: 10;
@@ -55,14 +55,14 @@ nav {
 }
 
 .nav-links li a {
-    color: white;
+    color: #f0f8ff;
     text-decoration: none;
     font-size: 1.1em;
     transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #f39c12;
+    color: #ff6347; /* Coral */
 }
 
 .hero-content {
@@ -76,19 +76,23 @@ nav {
 .hero-content h1 {
     font-size: 3.5em;
     letter-spacing: 2px;
+    background: linear-gradient(90deg, #ff7f50, #1e90ff); /* Coral to Dodger Blue */
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
 .hero-content h1 span {
-    color: #f39c12;
+    color: #ff6347; /* Coral */
 }
 
 .hero-content p {
     font-size: 1.5em;
     margin: 10px 0 20px;
+    color: #f0f8ff;
 }
 
 .hero-content .btn {
-    background-color: #f39c12;
+    background-color: #1e90ff;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
@@ -98,13 +102,14 @@ nav {
 }
 
 .hero-content .btn:hover {
-    background-color: #e67e22;
+    background-color: #6495ed; /* Cornflower Blue */
 }
 
 /* Sections */
 .section {
     padding: 80px 40px;
     text-align: center;
+    background-color: #f8f9fa;
 }
 
 .about p {
@@ -121,16 +126,17 @@ nav {
 }
 
 .skills .skill-card {
-    background-color: #333;
+    background-color: #1e90ff;
     color: white;
     padding: 20px;
     width: 200px;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .skills .skill-card:hover {
     transform: scale(1.05);
+    background-color: #6495ed;
 }
 
 /* Projects section */
@@ -146,26 +152,28 @@ nav {
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .projects .project-card:hover {
     transform: translateY(-10px);
+    background-color: #f8f9fa;
 }
 
 .contact .contact-btn {
-    background-color: #f39c12;
+    background-color: #ff6347;
     color: white;
     padding: 15px 30px;
     text-decoration: none;
     border-radius: 5px;
     font-size: 1.2em;
-    position: relative; /* or absolute, depending on your layout */ 
-    top: 30px; /* Moves the element down by 20 pixels */ 
+    position: relative;
+    top: 30px;
+    transition: background-color 0.3s ease;
 }
 
 .contact .contact-btn:hover {
-    background-color: #e67e22;
+    background-color: #ff4500; /* Orange Red */
 }
 
 /* Footer */
