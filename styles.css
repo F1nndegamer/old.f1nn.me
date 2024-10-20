@@ -11,6 +11,9 @@ body {
     background-color: #f0f8ff;
     color: #333;
 }
+html {
+    scroll-behavior: smooth !important;
+}
 
 /* Hero section */
 .hero-section {
