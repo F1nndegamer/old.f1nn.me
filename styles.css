@@ -14,25 +14,11 @@ body {
 html {
     scroll-behavior: smooth !important;
 }
-/* Specific styling for the Window Walker project card */
-.project-card.window-walker {
-    background-image: url('Assets/uw9tgv\ \(2\).png'); /* Path to your background image */
-    background-size: cover;
-    background-position: center;
-    color: white; /* Adjust text color for contrast */
-}
-
-.project-card.window-walker h3,
-.project-card.window-walker p {
-    background-color: rgba(0, 0, 0, 0.6); /* Optional: Dark overlay for better text readability */
-    padding: 10px;
-    border-radius: 5px;
-}
 
 /* Hero section */
 .hero-section {
     height: 100vh;
-    background-image: url(Assets/Upscale\ background.png);
+    background-image: url(Assets/Background.webp); /* Replace with actual image */
     background-size: cover;
     background-position: center;
     position: relative;
@@ -93,13 +79,13 @@ nav {
 .hero-content h1 {
     font-size: 3.5em;
     letter-spacing: 2px;
-    background: #FFFFFF;
+    background: linear-gradient(90deg, #ff7f50, #1e90ff); /* Coral to Dodger Blue */
     -webkit-background-clip: text;
     color: transparent;
 }
 
 .hero-content h1 span {
-    color: #A0ECEC
+    color: #ff6347; /* Coral */
 }
 
 .hero-content p {
