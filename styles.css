@@ -18,7 +18,7 @@ html {
 /* Hero section */
 .hero-section {
     height: 100vh;
-    background-image: url(Assets/Background.webp); /* Replace with actual image */
+    background-image: url(Assets/Background.webp);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -79,13 +79,13 @@ nav {
 .hero-content h1 {
     font-size: 3.5em;
     letter-spacing: 2px;
-    background: linear-gradient(90deg, #ff7f50, #1e90ff); /* Coral to Dodger Blue */
+    background: #FFFFFF;
     -webkit-background-clip: text;
     color: transparent;
 }
 
 .hero-content h1 span {
-    color: #ff6347; /* Coral */
+    color: #A0ECEC
 }
 
 .hero-content p {
