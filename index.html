@@ -2,20 +2,26 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of a Unity C# Developer">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio of a Unity C# Developer" />
     <title>Finn - Unity C# Developer</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
     <header class="hero-section">
         <nav>
             <div class="logo">
-                <img src="Assets/Logo.png" alt="Logo" class="logo-img">
+                <img src="Assets/Logo.png" alt="Logo" class="logo-img" />
             </div>
-            <ul class="nav-links">
+            <button class="hamburger" aria-label="Toggle navigation menu" aria-expanded="false"
+                aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-menu">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
@@ -32,19 +38,27 @@
     <main>
         <section id="about" class="section about">
             <h2>About Me</h2>
-            <p>I am a Unity C# developer who has led teams in creating games. My skills include working with Unity,
+            <p>
+                I am a Unity C# developer who has led teams in creating games. My skills include working with Unity,
                 GitHub, and multiple programming languages like C#, CSS, and HTML. I am mostly self-taught, learning and
-                improving with each project.</p>
+                improving with each project.
+            </p>
         </section>
 
         <section id="skills" class="section skills">
             <h2>Skills</h2>
             <div class="skill-container">
                 <div class="skill-card">Unity Game Development</div>
+                <div class="skill-card">Game Prototyping & Rapid Development</div>
                 <div class="skill-card">Team Leadership</div>
                 <div class="skill-card">Version Control (GitHub)</div>
-                <div class="skill-card">C#</div>
-                <div class="skill-card">HTML & CSS</div>
+                <div class="skill-card">C# Programming</div>
+                <div class="skill-card">HTML, CSS & JavaScript</div>
+                <div class="skill-card">UI/UX Design & Animation</div>
+                <div class="skill-card">3D Modeling & 3D Printing</div>
+                <div class="skill-card">Programming Microcontrollers (ESP8266, ESP32)</div>
+                <div class="skill-card">Cross-Platform Publishing (Google Play, Steam)</div>
+                <div class="skill-card">Basic Electronics & Hardware Integration</div>
             </div>
         </section>
 
@@ -104,6 +118,45 @@
     <footer>
         <p>&copy; 2025 Finn.</p>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">&#8679;</button>
+
+    <!-- JavaScript -->
+    <script>
+        // Hamburger Menu Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+            navMenu.classList.toggle('active');
+        });
+
+        // Close nav menu when clicking a link
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', false);
+            });
+        });
+
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+        });
+
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 
 </html>
