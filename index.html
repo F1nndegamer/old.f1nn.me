@@ -119,44 +119,6 @@
         <p>&copy; 2025 Finn.</p>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button id="back-to-top" aria-label="Back to top">&#8679;</button>
-
-    <!-- JavaScript -->
-    <script>
-        // Hamburger Menu Toggle
-        const hamburger = document.querySelector('.hamburger');
-        const navMenu = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
-            hamburger.setAttribute('aria-expanded', !isExpanded);
-            navMenu.classList.toggle('active');
-        });
-
-        // Close nav menu when clicking a link
-        navMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                hamburger.setAttribute('aria-expanded', false);
-            });
-        });
-
-        // Back to Top Button
-        const backToTopButton = document.getElementById('back-to-top');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.style.display = 'block';
-            } else {
-                backToTopButton.style.display = 'none';
-            }
-        });
-
-        backToTopButton.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-    </script>
 </body>
 
 </html>
