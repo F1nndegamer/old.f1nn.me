@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown to 22:00 CEST</title>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            color: white;
+            font-family: sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            transition: background 1s;
+        }
+
+        #countdown {
+            font-size: 4em;
+        }
+
+        .red {
+            background: red;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Countdown to 22:00 CEST</h1>
+    <div id="countdown">Loading...</div>
+
+    <script>
+        function updateCountdown() {
+            const now = new Date();
+            const target = new Date();
+
+            // Set the target time to today 22:00 CEST (UTC+2)
+            target.setUTCHours(20, 0, 0, 0); // 22:00 CEST = 20:00 UTC
+
+            if (now > target) {
+                // If it's already past 22:00 CEST today, set target to tomorrow
+                target.setUTCDate(target.getUTCDate() + 1);
+            }
+
+            const diff = target - now;
+
+            if (diff <= 0) {
+                document.body.classList.add("red");
+                document.getElementById("countdown").textContent = "TIME'S UP!";
+                clearInterval(timer);
+                return;
+            }
+
+            const hours = Math.floor(diff / 1000 / 60 / 60);
+            const minutes = Math.floor((diff / 1000 / 60) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+
+            document.getElementById("countdown").textContent =
+                `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        updateCountdown();
+        const timer = setInterval(updateCountdown, 1000);
+    </script>
+</body>
+
+</html>
