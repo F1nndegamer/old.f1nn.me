@@ -40,12 +40,7 @@
             const target = new Date();
 
             // Set the target time to today 22:00 CEST (UTC+2)
-            target.setUTCHours(20, 0, 0, 0); // 22:00 CEST = 20:00 UTC
-
-            if (now > target) {
-                // If it's already past 22:00 CEST today, set target to tomorrow
-                target.setUTCDate(target.getUTCDate() + 1);
-            }
+            target.setUTCHours(20, 0, 0, 0); // 22:00 CEST = 20:00 UTC 
 
             const diff = target - now;
 
